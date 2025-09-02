@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  background-color: #f3f3f3;
+}
+
+.modal {
+  display: flex;
+  width: 45%;
+  height: 60vh;
+  margin-top: 15vh;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 2.5em;
+  border-radius: 25px;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+}
+
+.footer {
+  display: flex;
+  width: 40%;
+  padding-bottom: 2.5em;
+  margin-top: 15vh;
+  transition: 0.4s ease-in-out;
+}
+
+.icon {
+  padding: 8px;
+  background-color: #f3f3f3;
+  border-radius: 12px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  box-shadow: 4px 4px 10px #666666;
+}
+
+.icon img {
+  width: 36px;
+  transition: transform 0.5s;
+}
+
+.icon:hover img {
+  transform: scale(0.9);
+  fill: #333333;
+}
+
+.tech-card {
+  width: 48px;
+  transition: 0.4s ease-in-out;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-items: center;
+  gap: 8px;
+}
+
+.tech-card:hover {
+  flex: 8;
+}
+
+.tech-card img {
+  width: 36px;
+}
+
+.tech-card span {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.tech-card:hover span {
+  width: 100px;
+  opacity: 1;
+}
+
+.border-anim {
+  position: relative;
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+
+.border-anim .icon {
+  margin-left: 8px;
+}
+
+.border-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #333;
+  stroke-width: 4;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+.border-anim:hover .border-svg rect {
+  animation: drawBorder 0.4s linear forwards;
+}
+
+@keyframes drawBorder {
+  from {
+    stroke-dashoffset: 400; /* çizim başlasın */
+  }
+  to {
+    stroke-dashoffset: 0; /* tamamen çizilsin */
+  }
+}
