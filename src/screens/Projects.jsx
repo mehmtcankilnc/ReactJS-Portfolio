@@ -3,147 +3,103 @@ import FoodLens from "../assets/Foodlens.png";
 import Carentu from "../assets/Carentu.png";
 import Stalker from "../assets/Stalker.png";
 
+function ProjectCard({ title, desc, img, stack, codeLink, demoLink, reverse }) {
+  return (
+    <div
+      className={`flex flex-col lg:flex-row ${
+        reverse ? "lg:flex-row-reverse" : ""
+      } gap-6 lg:gap-10 items-center`}
+    >
+      <img
+        src={img}
+        alt={title}
+        className="w-56 sm:w-64 lg:w-72 rounded-2xl border-4"
+      />
+      <div className="flex flex-col gap-6 text-center lg:text-left max-w-xl items-center">
+        <span className="font-bold text-xl">{title}</span>
+        <p className="font-light text-gray-600">{desc}</p>
+        <div className="flex flex-wrap justify-center lg:justify-start gap-2">
+          {stack.map((s) => (
+            <span key={s} className="font-bold text-sm sm:text-base">
+              {s}
+            </span>
+          ))}
+        </div>
+        <div className="flex justify-center lg:justify-start gap-4 mt-2 flex-wrap">
+          {codeLink && (
+            <button
+              onClick={() => window.open(codeLink, "_blank")}
+              className="border-anim flex font-medium items-center gap-2 px-3 py-1"
+            >
+              Code
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                alt="GitHub"
+                className="w-6 h-6"
+              />
+              <svg className="border-svg">
+                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
+              </svg>
+            </button>
+          )}
+          {demoLink && (
+            <button
+              onClick={() => window.open(demoLink, "_blank")}
+              className="border-anim flex font-medium items-center gap-2 px-3 py-1"
+            >
+              Live Demo
+              <FiExternalLink size={22} />
+              <svg className="border-svg">
+                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
+              </svg>
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Projects({ id }) {
   return (
     <section
       id={id}
-      className="modal scroll-mt-24 mx-auto"
-      style={{ height: "auto" }}
+      className="modal scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 flex flex-col gap-16"
     >
       <span className="font-bold text-[#d3191c]">PROJECTS</span>
-      <div className="flex gap-5">
-        <img
-          src={FoodLens}
-          style={{ width: 250, borderRadius: 20, borderWidth: 3 }}
-        />
-        <div className="flex flex-col mx-4 gap-4 items-center justify-center">
-          <span className="font-bold text-xl">FoodLens</span>
-          <p className="font-light text-[gray] text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            odit, autem architecto dignissimos voluptates quod. Magni doloremque
-            omnis ipsum nisi error minus, quisquam, consequatur laborum delectus
-            facilis voluptatibus tempore pariatur. Reprehenderit tenetur saepe
-            sequi corrupti, quidem quas dignissimos repellat deleniti deserunt
-            qui.
-          </p>
-          <div className="flex gap-2">
-            <span className="font-bold">React Native</span>
-            <span className="font-bold">Expo</span>
-          </div>
-          <div className="flex gap-5">
-            <button
-              onClick={() =>
-                window.open(
-                  "https://github.com/mehmtcankilnc/FoodLens",
-                  "_blank"
-                )
-              }
-              className="border-anim flex font-medium items-center gap-2"
-            >
-              Code
-              <img
-                style={{ width: 24 }}
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-              />
-              <svg class="border-svg">
-                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
-              </svg>
-            </button>
-            <button className="border-anim flex font-medium items-center gap-2">
-              Live Demo
-              <FiExternalLink size={24} />
-              <svg class="border-svg">
-                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="flex gap-5">
-        <div className="flex flex-col mx-4 gap-4 items-center justify-center">
-          <span className="font-bold text-xl">Carentu</span>
-          <p className="font-light text-[gray] text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            odit, autem architecto dignissimos voluptates quod. Magni doloremque
-            omnis ipsum nisi error minus, quisquam, consequatur laborum delectus
-            facilis voluptatibus tempore pariatur. Reprehenderit tenetur saepe
-            sequi corrupti, quidem quas dignissimos repellat deleniti deserunt
-            qui.
-          </p>
-          <div className="flex gap-2">
-            <span className="font-bold">React Native</span>
-            <span className="font-bold">Cloudflare</span>
-          </div>
-          <div className="flex gap-5">
-            <button className="border-anim flex font-medium items-center gap-2">
-              Code
-              <img
-                style={{ width: 24 }}
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-              />
-              <svg class="border-svg">
-                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
-              </svg>
-            </button>
-            <button className="border-anim flex font-medium items-center gap-2">
-              Live Demo
-              <FiExternalLink size={24} />
-              <svg class="border-svg">
-                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <img
-          src={Carentu}
-          style={{ width: 250, borderRadius: 20, borderWidth: 3 }}
-        />
-      </div>
-      <div className="flex gap-5">
-        <img
-          src={Stalker}
-          style={{ width: 250, borderRadius: 20, borderWidth: 3 }}
-        />
-        <div className="flex flex-col mx-4 gap-4 items-center justify-center">
-          <span className="font-bold text-xl">Stalker</span>
-          <p className="font-light text-[gray] text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            odit, autem architecto dignissimos voluptates quod. Magni doloremque
-            omnis ipsum nisi error minus, quisquam, consequatur laborum delectus
-            facilis voluptatibus tempore pariatur. Reprehenderit tenetur saepe
-            sequi corrupti, quidem quas dignissimos repellat deleniti deserunt
-            qui.
-          </p>
-          <div className="flex gap-2">
-            <span className="font-bold">React Native</span>
-            <span className="font-bold">Expo</span>
-          </div>
-          <div className="flex gap-5">
-            <button
-              onClick={() =>
-                window.open("https://github.com/fnurIskal/stalker", "_blank")
-              }
-              className="border-anim flex font-medium items-center gap-2"
-            >
-              Code
-              <img
-                style={{ width: 24 }}
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-              />
-              <svg class="border-svg">
-                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
-              </svg>
-            </button>
-            <button className="border-anim flex font-medium items-center gap-2">
-              Live Demo
-              <FiExternalLink size={24} />
-              <svg class="border-svg">
-                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
+      <ProjectCard
+        title="FoodLens"
+        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        odit, autem architecto dignissimos voluptates quod. Magni doloremque
+        omnis ipsum nisi error minus, quisquam, consequatur laborum delectus."
+        img={FoodLens}
+        stack={["React Native", "Expo"]}
+        codeLink="https://github.com/mehmtcankilnc/FoodLens"
+        demoLink="foodlens"
+      />
+      <hr className="my-2" style={{ color: "gray" }} />
+      <ProjectCard
+        title="Carentu"
+        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        odit, autem architecto dignissimos voluptates quod. Magni doloremque
+        omnis ipsum nisi error minus, quisquam, consequatur laborum delectus."
+        img={Carentu}
+        stack={["React Native", "Cloudflare"]}
+        reverse
+        codeLink="https://github.com/mehmtcankilnc/FoodLens"
+        demoLink="carentu"
+      />
+      <hr className="my-2" style={{ color: "gray" }} />
+      <ProjectCard
+        title="Stalker"
+        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        odit, autem architecto dignissimos voluptates quod. Magni doloremque
+        omnis ipsum nisi error minus, quisquam, consequatur laborum delectus."
+        img={Stalker}
+        stack={["React Native", "Expo"]}
+        codeLink="https://github.com/fnurIskal/stalker"
+        demoLink="stalker"
+      />
     </section>
   );
 }
