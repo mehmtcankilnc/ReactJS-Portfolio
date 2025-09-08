@@ -3,7 +3,17 @@ import FoodLens from "../assets/Foodlens.png";
 import Carentu from "../assets/Carentu.png";
 import Stalker from "../assets/Stalker.png";
 
-function ProjectCard({ title, desc, img, stack, codeLink, demoLink, reverse }) {
+function ProjectCard({
+  title,
+  desc,
+  img,
+  stack,
+  codeLink,
+  demoLink,
+  reverse,
+  codeDisabled = false,
+  demoDisabled = false,
+}) {
   return (
     <div
       className={`flex flex-col lg:flex-row ${
@@ -28,8 +38,11 @@ function ProjectCard({ title, desc, img, stack, codeLink, demoLink, reverse }) {
         <div className="flex justify-center lg:justify-start gap-4 mt-2 flex-wrap">
           {codeLink && (
             <button
+              disabled={codeDisabled}
               onClick={() => window.open(codeLink, "_blank")}
-              className="border-anim flex font-medium items-center gap-2 px-3 py-1"
+              className={`${
+                codeDisabled ? "" : "border-anim"
+              } flex font-medium items-center gap-2 px-3 py-1 disabled:opacity-50`}
             >
               Code
               <img
@@ -37,21 +50,42 @@ function ProjectCard({ title, desc, img, stack, codeLink, demoLink, reverse }) {
                 alt="GitHub"
                 className="w-6 h-6"
               />
-              <svg className="border-svg">
-                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
-              </svg>
+              {!codeDisabled && (
+                <svg className="border-svg">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="100%"
+                    height="100%"
+                    rx="12"
+                    ry="12"
+                  />
+                </svg>
+              )}
             </button>
           )}
           {demoLink && (
             <button
+              disabled={demoDisabled}
               onClick={() => window.open(demoLink, "_blank")}
-              className="border-anim flex font-medium items-center gap-2 px-3 py-1"
+              className={`${
+                demoDisabled ? "" : "border-anim"
+              } flex font-medium items-center gap-2 px-3 py-1 disabled:opacity-50`}
             >
               Live Demo
               <FiExternalLink size={22} />
-              <svg className="border-svg">
-                <rect x="0" y="0" width="100%" height="100%" rx="12" ry="12" />
-              </svg>
+              {!demoDisabled && (
+                <svg className="border-svg">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="100%"
+                    height="100%"
+                    rx="12"
+                    ry="12"
+                  />
+                </svg>
+              )}
             </button>
           )}
         </div>
@@ -64,7 +98,7 @@ export default function Projects({ id }) {
   return (
     <section
       id={id}
-      className="modal scroll-mt-24 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 flex flex-col gap-16"
+      className="modal mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 flex flex-col gap-16"
     >
       <span className="font-bold text-[#d3191c]">PROJECTS</span>
       <ProjectCard
@@ -88,6 +122,8 @@ export default function Projects({ id }) {
         reverse
         codeLink="https://github.com/mehmtcankilnc/FoodLens"
         demoLink="carentu"
+        codeDisabled={true}
+        demoDisabled={true}
       />
       <hr className="my-2" style={{ color: "gray" }} />
       <ProjectCard
@@ -99,6 +135,7 @@ export default function Projects({ id }) {
         stack={["React Native", "Expo"]}
         codeLink="https://github.com/fnurIskal/stalker"
         demoLink="stalker"
+        demoDisabled={true}
       />
     </section>
   );
