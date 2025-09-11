@@ -25,13 +25,14 @@ export default function About({ id }) {
             </h2>
           </div>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-justify">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Exercitationem explicabo eaque tempore, totam nihil perspiciatis vel
-            laudantium quisquam debitis qui voluptas quaerat optio minus
-            distinctio ea vitae labore accusamus aliquid iste commodi nam!
-            Quidem porro sequi deserunt sed commodi harum animi enim eum ut
-            rerum quam facilis consequatur earum ea aliquid magnam tenetur esse
-            hic, non autem!
+            Hey, I'm Mehmetcan, a recently graduated software developer based in
+            Adana, Türkiye. I have over a year of experience building mobile
+            applications with React Native and Expo, where I worked with tools
+            and libraries such as NativeWind, Firebase, Supabase, Redux, and
+            more. For the past three months, I’ve also been focusing on backend
+            development with ASP.NET Core Web API following the Clean
+            Architecture principles. In addition, I designed and developed this
+            portfolio website myself using ReactJS and Tailwind CSS.
           </p>
         </div>
       </div>

@@ -103,38 +103,43 @@ export default function Projects({ id }) {
       <span className="font-bold text-[#d3191c]">PROJECTS</span>
       <ProjectCard
         title="FoodLens"
-        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-        odit, autem architecto dignissimos voluptates quod. Magni doloremque
-        omnis ipsum nisi error minus, quisquam, consequatur laborum delectus."
+        desc="FoodLens is a graduation thesis project that I developed together 
+        with my teammate Fatma Nur Iskal. The app helps users track their daily 
+        calorie intake and analyze the ingredients of packaged foods simply by 
+        scanning the product’s barcode. In addition, FoodLens enables users to 
+        create personalized diet plans by setting their nutritional goals."
         img={FoodLens}
         stack={["React Native", "Expo"]}
         codeLink="https://github.com/mehmtcankilnc/FoodLens"
-        demoLink="foodlens"
+        // demoLink="foodlens"
+        demoDisabled={true}
       />
       <hr className="my-2" style={{ color: "gray" }} />
       <ProjectCard
         title="Carentu"
-        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-        odit, autem architecto dignissimos voluptates quod. Magni doloremque
-        omnis ipsum nisi error minus, quisquam, consequatur laborum delectus."
+        desc="Carentu is a freelance project that I am currently developing together 
+        with my colleague Fatma Nur Iskal. The app helps users find the perfect car 
+        for renting, while allowing local businesses to list their car inventories 
+        and connect with potential customers."
         img={Carentu}
         stack={["React Native", "Cloudflare"]}
         reverse
-        codeLink="https://github.com/mehmtcankilnc/FoodLens"
-        demoLink="carentu"
+        // codeLink="https://github.com/mehmtcankilnc/FoodLens"
+        // demoLink="carentu"
         codeDisabled={true}
         demoDisabled={true}
       />
       <hr className="my-2" style={{ color: "gray" }} />
       <ProjectCard
         title="Stalker"
-        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-        odit, autem architecto dignissimos voluptates quod. Magni doloremque
-        omnis ipsum nisi error minus, quisquam, consequatur laborum delectus."
+        desc="Stalker is a hobby project that I developed together with my colleague 
+        Fatma Nur Iskal. The app helps users track their daily moods by selecting 
+        custom-designed emojis that represent specific feelings. In addition, users 
+        can track their habits, create new ones, and monitor their progress over time."
         img={Stalker}
         stack={["React Native", "Expo"]}
         codeLink="https://github.com/fnurIskal/stalker"
-        demoLink="stalker"
+        // demoLink="stalker"
         demoDisabled={true}
       />
     </section>
