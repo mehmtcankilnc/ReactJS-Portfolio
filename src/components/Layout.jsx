@@ -1,10 +1,11 @@
 import Navbar from "./Navbar";
 import { useCallback, useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const NAV_H = 128;
 
-function Layout({ children }) {
+function Layout() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -17,7 +18,10 @@ function Layout({ children }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToId = useCallback((id) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const doScroll = (id) => {
     if (id === "contact") {
       window.scrollTo({
         top: document.documentElement.scrollHeight,
@@ -29,7 +33,27 @@ function Layout({ children }) {
     if (!el) return;
     const y = el.getBoundingClientRect().top + window.pageYOffset - NAV_H - 8;
     window.scrollTo({ top: y, behavior: "smooth" });
-  }, []);
+  };
+
+  const handleNav = useCallback(
+    (id) => {
+      if (location.pathname !== "/") {
+        navigate(`/#${id}`);
+      } else {
+        doScroll(id);
+      }
+    },
+    [location.pathname, navigate]
+  );
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.substring(1);
+      setTimeout(() => {
+        doScroll(id);
+      }, 100);
+    }
+  }, [location.hash]);
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -37,8 +61,10 @@ function Layout({ children }) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar onNav={scrollToId} />
-      <main className="flex-1">{children}</main>
+      <Navbar onNav={handleNav} />
+      <main className="flex-1">
+        <Outlet />
+      </main>
       <button
         onClick={handleScrollToTop}
         className={`fixed bottom-8 right-8 bg-[#d3191c] text-white p-3 rounded-full shadow-lg hover:opacity-90 transition-all duration-300 z-50 ${
