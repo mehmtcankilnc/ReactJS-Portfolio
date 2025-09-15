@@ -1,24 +1,28 @@
+import MobileProjectsImg from "../assets/mobile-projects.jpg";
+import BackendProjectsImg from "../assets/backend-projects.jpeg";
+import UnityProjectsImg from "../assets/unity-projects.png";
+
 export default function Projects({ id }) {
   const projectCategories = [
     {
       url: "mobile",
       title: "Mobile Projects",
       desc: "I develop cross-platform, user-friendly, and high-performance mobile applications for both iOS and Android using modern technologies.",
-      img: "src/assets/mobile-projects.jpg",
+      img: MobileProjectsImg,
       stack: ["React Native", "Expo", "Firebase", "Supabase", "NativeWind"],
     },
     {
       url: "backend",
       title: "Backend Projects",
       desc: "I build robust and scalable backend services using ASP.NET Core Web API, focusing on clean, maintainable code following Clean Architecture principles.",
-      img: "src/assets/backend-projects.jpeg",
+      img: BackendProjectsImg,
       stack: ["ASP.NET Core", "C#", "Azure", "Docker", "Clean Architecture"],
     },
     {
       url: "unity",
       title: "Unity Projects",
       desc: "As a hobby, I enjoy creating games and interactive experiences using the Unity engine, exploring game mechanics, 2D/3D assets, and C# scripting.",
-      img: "src/assets/unity-projects.png",
+      img: UnityProjectsImg,
       stack: ["Unity", "C#", "Game Development", "2D & 3D"],
     },
   ];
