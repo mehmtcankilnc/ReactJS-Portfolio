@@ -7,6 +7,7 @@ import Contact from "./screens/Contact";
 import MobileProjects from "./screens/MobileProjects";
 import BackendProjects from "./screens/BackendProjects";
 import UnityProjects from "./screens/UnityProjects";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="unity" element={<UnityProjects />} />
         </Route>
       </Routes>
+      <Analytics />
     </Router>
   );
 }
