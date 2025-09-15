@@ -1,6 +1,7 @@
 import MobileProjectsImg from "../assets/mobile-projects.jpg";
 import BackendProjectsImg from "../assets/backend-projects.jpeg";
 import UnityProjectsImg from "../assets/unity-projects.png";
+import { Link } from "react-router-dom";
 
 export default function Projects({ id }) {
   const projectCategories = [
@@ -37,8 +38,8 @@ export default function Projects({ id }) {
       </span>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
         {projectCategories.map((project) => (
-          <a
-            href={`/${project.url}`}
+          <Link
+            to={`/${project.url}`}
             key={project.title}
             className="flex flex-col items-center w-72 border-0 rounded-2xl shadow p-4 space-y-2 hover:-translate-y-2 duration-150 hover:cursor-pointer hover:border-1"
           >
@@ -61,7 +62,7 @@ export default function Projects({ id }) {
                 </span>
               ))}
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
