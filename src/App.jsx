@@ -7,7 +7,7 @@ import Contact from "./screens/Contact";
 import MobileProjects from "./screens/MobileProjects";
 import BackendProjects from "./screens/BackendProjects";
 import UnityProjects from "./screens/UnityProjects";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
