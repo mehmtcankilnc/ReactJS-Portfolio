@@ -40,7 +40,7 @@ export default function Projects({ id }) {
           <a
             href={`/${project.url}`}
             key={project.title}
-            className="flex flex-col items-center w-72 border-2 rounded-2xl shadow p-4 space-y-2 hover:-translate-y-2 duration-300 hover:cursor-pointer"
+            className="flex flex-col items-center w-72 border-0 rounded-2xl shadow p-4 space-y-2 hover:-translate-y-2 duration-150 hover:cursor-pointer hover:border-1"
           >
             <img
               src={project.img}
@@ -51,11 +51,11 @@ export default function Projects({ id }) {
             <p className="text-gray-700 text-sm sm:text-sm leading-relaxed text-center">
               {project.desc}
             </p>
-            <div className="flex flex-wrap justify-center gap-2 mt-auto pt-4 border-t">
+            <div className="flex flex-wrap justify-center gap-2 mt-auto pt-4 border-t border-[#e5e7eb]">
               {project.stack.map((s) => (
                 <span
                   key={s}
-                  className="font-semibold text-xs bg-gray-200 px-3 py-1 rounded-full"
+                  className="font-semibold text-xs bg-gray-200 px-3 py-1 rounded-full text-gray-700"
                 >
                   {s}
                 </span>

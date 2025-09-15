@@ -16,9 +16,7 @@ export default function About({ id }) {
         </div>
         <div className="order-1 lg:order-2 flex flex-col gap-6">
           <div className="flex flex-col gap-2">
-            <span className="font-bold tracking-wide text-[#d3191c]">
-              ABOUT ME
-            </span>
+            <span className="font-bold text-2xl text-[#d3191c]">ABOUT ME</span>
             <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl leading-tight">
               Fresh Graduated <br className="hidden sm:block" />
               Software Developer

@@ -32,7 +32,7 @@ export default function ProjectCard({
           {stack.map((s) => (
             <span
               key={s}
-              className="font-semibold text-xs bg-gray-200 px-3 py-1 rounded-full"
+              className="font-semibold text-xs bg-gray-200 px-3 py-1 rounded-full text-gray-700"
             >
               {s}
             </span>

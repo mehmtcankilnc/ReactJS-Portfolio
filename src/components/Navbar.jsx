@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoMenu, IoClose, IoChevronDown, IoChevronUp } from "react-icons/io5";
 import { useLocation, Link } from "react-router-dom";
+import Header from "../assets/header.png";
 
 const PROJECTS_SUB_ITEMS = [
   { id: "mobile", label: "Mobile Projects" },
@@ -104,8 +105,13 @@ export default function Navbar({ onNav }) {
         scrolled ? glass + " shadow-sm" : "bg-transparent",
       ].join(" ")}
     >
-      <div className="flex items-center justify-between px-6 py-4">
-        <div className="font-bold text-xl text-[#d3191c]">Mehmetcan Kılınç</div>
+      <div className="flex items-center justify-between px-12 py-4">
+        <div
+          className="font-bold text-3xl text-[#d3191c] tracking-wider"
+          style={{ fontFamily: "Jaini" }}
+        >
+          MEHMETCAN KILINÇ
+        </div>
         <nav className="hidden md:flex gap-10">
           {NAV_ITEMS.map((item) =>
             item.subItems ? (
@@ -129,7 +135,7 @@ export default function Navbar({ onNav }) {
                 </button>
                 {projectsOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-max">
-                    <div className="w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div className="w-48 rounded-md shadow-lg bg-white">
                       <div
                         className="py-1"
                         role="menu"

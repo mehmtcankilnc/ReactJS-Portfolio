@@ -20,7 +20,7 @@ export default function UnityProjects() {
         stack={["C#", "3D Game Development", "Survival Game"]}
         customImgStyle="w-80 sm:w-72 lg:w-100"
       />
-      <hr className="my-2" style={{ color: "gray" }} />
+      <hr className="my-2" style={{ color: "#e5e7eb" }} />
       <ProjectCard
         id="galacticrun"
         title="Galactic Run"
@@ -34,7 +34,7 @@ export default function UnityProjects() {
         stack={["C#", "2D Game Development", "Space Shooter"]}
         reverse
       />
-      <hr className="my-2" style={{ color: "gray" }} />
+      <hr className="my-2" style={{ color: "#e5e7eb" }} />
       <ProjectCard
         id="fruitvoyager"
         title="Fruit Voyager"
