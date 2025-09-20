@@ -21,6 +21,12 @@ function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  useEffect(() => {
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.hash, location.pathname]);
+
   const doScroll = (id) => {
     if (id === "contact") {
       window.scrollTo({

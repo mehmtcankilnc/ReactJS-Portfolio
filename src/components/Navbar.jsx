@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { IoMenu, IoClose, IoChevronDown, IoChevronUp } from "react-icons/io5";
 import { useLocation, Link } from "react-router-dom";
-import Header from "../assets/header.png";
 
 const PROJECTS_SUB_ITEMS = [
   { id: "mobile", label: "Mobile Projects" },
