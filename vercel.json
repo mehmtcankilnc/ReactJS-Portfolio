@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.mehmtcankilinc.com",
+      "permanent": true
+    }
+  ]
+}
