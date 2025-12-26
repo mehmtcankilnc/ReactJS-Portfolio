@@ -10,11 +10,11 @@ export default function Home({ id }) {
         <div className="flex flex-col gap-10 order-1">
           <div className="flex flex-col gap-6">
             <h1 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight">
-              Software Developer
+              Full Stack Developer
             </h1>
             <p className="text-base sm:text-lg text-gray-600">
-              Hey, I'm Mehmetcan. I'm a fresh graduated software developer based
-              in Adana, Türkiye.
+              Hey, I'm Mehmetcan. I'm a fresh graduated full stack developer
+              based in Adana, Türkiye.
             </p>
           </div>
           <div className="flex gap-4 sm:gap-6">
@@ -101,6 +101,13 @@ export default function Home({ id }) {
               alt=".NET Core"
             />
             <span>ASPNET Core</span>
+          </div>
+          <div className="tech-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg"
+              alt="TypeScript"
+            />
+            <span>TypeScript</span>
           </div>
           <div className="tech-card">
             <img

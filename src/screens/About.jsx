@@ -19,18 +19,19 @@ export default function About({ id }) {
             <span className="font-bold text-2xl text-[#d3191c]">ABOUT ME</span>
             <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl leading-tight">
               Fresh Graduated <br className="hidden sm:block" />
-              Software Developer
+              Full Stack Developer
             </h2>
           </div>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-justify">
-            Hey, I'm Mehmetcan, a recently graduated software developer based in
-            Adana, Türkiye. I have over a year of experience building mobile
-            applications with React Native and Expo, where I worked with tools
-            and libraries such as NativeWind, Firebase, Supabase, Redux, and
-            more. For the past three months, I’ve also been focusing on backend
-            development with ASP.NET Core Web API following the Clean
-            Architecture principles. In addition, I designed and developed this
-            portfolio website myself using ReactJS and Tailwind CSS.
+            Hey, I'm Mehmetcan, a recently graduated full stack developer based
+            in Adana, Türkiye. I have approxiametly 2 years of experience
+            building mobile applications with React Native and Expo, where I
+            worked with tools and libraries such as NativeWind, Firebase,
+            Supabase, Redux, and more. For the past six months, I’ve also been
+            focusing on backend development with ASP.NET Core Web API following
+            the Clean Architecture and Vertical Slice Architecture principles.
+            In addition, I designed and developed this portfolio website myself
+            using ReactJS and Tailwind CSS.
           </p>
         </div>
       </div>
