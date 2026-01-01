@@ -71,7 +71,7 @@ export const botScript = {
 
   tutorsudoku: {
     message:
-      "Tutor Sudoku is developed with **TypeScript** & **React Native CLI**. It helps users learn new solving techniques and allows them to scan physical boards for digital hints when stuck. Powered by **Redux**, **AsyncStorage**, and **i18n**.",
+      "Tutor Sudoku is developed with **TypeScript** & **React Native CLI**. It helps users learn new solving techniques and allows them to scan physical boards for digital hints when stuck. Powered by **Redux**, **AsyncStorage**, and **i18n**. The app is currently published on Play Store. [Store Link](https://play.google.com/store/apps/details?id=com.tutorsudoku)",
     options: [
       {
         label: "More Info",

@@ -41,7 +41,7 @@ export default function Projects({ id }) {
           <Link
             to={`/${project.url}`}
             key={project.title}
-            className="flex flex-col items-center w-full border-0 rounded-2xl shadow p-4 space-y-2 hover:-translate-y-2 duration-150 hover:cursor-pointer hover:border-1"
+            className="flex flex-col items-center h-[520px] w-full border-0 rounded-2xl shadow-xl p-4 space-y-2 hover:-translate-y-2 duration-150 hover:cursor-pointer hover:border-1"
           >
             <img
               src={project.img}

@@ -10,8 +10,9 @@ const PROJECTS_SUB_ITEMS = [
 
 const NAV_ITEMS = [
   { id: "home", label: "Home" },
-  { id: "about", label: "About" },
+  { id: "published", label: "Apps" },
   { id: "projects", label: "Projects", subItems: PROJECTS_SUB_ITEMS },
+  { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];
 

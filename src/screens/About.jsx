@@ -24,13 +24,13 @@ export default function About({ id }) {
           </div>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-justify">
             Hey, I'm Mehmetcan, a recently graduated full stack developer based
-            in Adana, Türkiye. I have approxiametly 2 years of experience
-            building mobile applications with React Native and Expo, where I
-            worked with tools and libraries such as NativeWind, Firebase,
-            Supabase, Redux, and more. For the past six months, I’ve also been
-            focusing on backend development with ASP.NET Core Web API following
-            the Clean Architecture and Vertical Slice Architecture principles.
-            In addition, I designed and developed this portfolio website myself
+            in Türkiye. I have approxiametly 2 years of experience building
+            mobile applications with React Native and Expo, where I worked with
+            tools and libraries such as NativeWind, Firebase, Supabase, Redux,
+            and more. For the past six months, I’ve also been focusing on
+            backend development with ASP.NET Core Web API following the Clean
+            Architecture and Vertical Slice Architecture principles. In
+            addition, I designed and developed this portfolio website myself
             using ReactJS and Tailwind CSS.
           </p>
         </div>

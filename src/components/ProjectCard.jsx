@@ -8,6 +8,7 @@ export default function ProjectCard({
   stack,
   codeLink,
   demoLink,
+  storeLink,
   reverse,
   codeDisabled = false,
   demoDisabled = false,
@@ -39,6 +40,34 @@ export default function ProjectCard({
           ))}
         </div>
         <div className="flex justify-center lg:justify-start gap-4 mt-2 flex-wrap">
+          {storeLink && (
+            <button
+              disabled={codeDisabled}
+              onClick={() => window.open(storeLink, "_blank")}
+              className={`${
+                codeDisabled ? "" : "border-anim"
+              } flex font-medium items-center gap-2 px-3 py-1 disabled:opacity-50`}
+            >
+              Store
+              <img
+                src="https://cdn.simpleicons.org/googleplay/000000"
+                alt="Play Store"
+                className="w-6 h-6"
+              />
+              {!codeDisabled && (
+                <svg className="border-svg">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="100%"
+                    height="100%"
+                    rx="12"
+                    ry="12"
+                  />
+                </svg>
+              )}
+            </button>
+          )}
           {codeLink && (
             <button
               disabled={codeDisabled}

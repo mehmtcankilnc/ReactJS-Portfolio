@@ -32,12 +32,11 @@ export default function MobileProjects({ id }) {
         desc="Tutor Sudoku is an educational mobile app that helps users to 
         learn new sudoku solving techniques. Also, the users can scan a sudoku
         board when they get stuck on paper and take hints. The app features full
-        localization (Turkish/English) and supports dark/light modes. The app is 
-        currently in closed testing phase on Play Store."
+        localization (Turkish/English) and supports dark/light modes. The app is currently published on Play Store."
         img={TutorSudoku}
         stack={["TypeScript", "React Native", "Redux Toolkit", "i18n"]}
         codeLink="https://github.com/mehmtcankilnc/TutorSudoku"
-        // demoLink="foodlens"
+        storeLink="https://play.google.com/store/apps/details?id=com.tutorsudoku"
         demoDisabled={true}
         reverse
       />

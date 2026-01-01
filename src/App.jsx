@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import Home from "./screens/Home";
 import About from "./screens/About";
 import Projects from "./screens/Projects";
+import PublishedApps from "./screens/PublishedApps";
 import Contact from "./screens/Contact";
 import MobileProjects from "./screens/MobileProjects";
 import BackendProjects from "./screens/BackendProjects";
@@ -19,8 +20,9 @@ export default function App() {
             element={
               <>
                 <Home id="home" />
-                <About id="about" />
+                <PublishedApps id="published" />
                 <Projects id="projects" />
+                <About id="about" />
                 <Contact id="contact" />
               </>
             }

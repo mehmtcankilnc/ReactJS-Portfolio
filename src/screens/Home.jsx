@@ -14,7 +14,7 @@ export default function Home({ id }) {
             </h1>
             <p className="text-base sm:text-lg text-gray-600">
               Hey, I'm Mehmetcan. I'm a fresh graduated full stack developer
-              based in Adana, Türkiye.
+              based in Türkiye.
             </p>
           </div>
           <div className="flex gap-4 sm:gap-6">
@@ -42,6 +42,21 @@ export default function Home({ id }) {
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
                 alt="LinkedIn"
+                className="w-8 h-8"
+              />
+            </button>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://play.google.com/store/apps/developer?id=Mehmetcan+Kılınç",
+                  "_blank"
+                )
+              }
+              className="icon"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
+                alt="Play Store"
                 className="w-8 h-8"
               />
             </button>
