@@ -33,11 +33,11 @@ export const botScript = {
       "Here are the mobile applications he developed. Select one to see the details:",
     options: [
       {
-        label: "CvCreator",
+        label: "Cv Creator (Published)",
         next: "cvcreator",
       },
       {
-        label: "Tutor Sudoku",
+        label: "Tutor Sudoku (Published)",
         next: "tutorsudoku",
       },
       {
@@ -58,7 +58,7 @@ export const botScript = {
 
   cvcreator: {
     message:
-      "CvCreator is built using **TypeScript** & **React Native CLI**. It allows users to create and download resumes and cover letters instantly without logging in. Key technologies include **Redux**, **i18n**, and **Supabase**.",
+      "CvCreator is built using **TypeScript** & **React Native CLI**. It allows users to create and download resumes and cover letters instantly without logging in. Key technologies include **Redux**, **i18n**, and **NativeWind**. The app is currently published on Play Store. [Store Link](https://play.google.com/store/apps/details?id=com.mehmtcankilinc.cvcreator)",
     options: [
       {
         label: "More Info",

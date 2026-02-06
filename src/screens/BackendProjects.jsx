@@ -1,7 +1,11 @@
 import ProjectCard from "../components/ProjectCard";
 import ChitChat from "../assets/ChitChat.png";
 import LexiBox from "../assets/LexiBox.jpeg";
-import CvCreator from "../assets/CvCreator.jpeg";
+import CvCreator1 from "../assets/CvCreator1.jpeg";
+import CvCreator2 from "../assets/CvCreator2.jpeg";
+import CvCreator3 from "../assets/CvCreator3.jpeg";
+import CvCreator4 from "../assets/CvCreator4.jpeg";
+import CvCreator5 from "../assets/CvCreator5.jpeg";
 
 export default function BackendProjects() {
   return (
@@ -9,21 +13,19 @@ export default function BackendProjects() {
       <ProjectCard
         id="cvcreatorapi"
         title="CvCreator API"
-        desc="I developed my mobile application's API using ASP.NET Core. Users 
-        can login via their Google accounts or continue as guest users. Users 
-        can create their own resumes and cover letters. If the users signs in 
-        via Google, they can save their files. I built the API according to Clean
-        Architecture principles. I implemented various middlewares like rate 
-        limiting, global error handling, JWT Bearer authentication, logging 
-        requests etc. I used Playwright for generating PDF files and Supabase 
-        as the database."
-        img={CvCreator}
+        desc="I developed this mobile app API using ASP.NET Core based on Clean 
+        Architecture. Users can log in via Google or use the app as guests to 
+        create resumes and cover letters. I utilized Playwright for generating 
+        PDFs and PostgreSQL as the database. The project implements best practices 
+        like rate limiting, global error handling, and JWT authentication. The API 
+        is fully functional and hosted on my own Linux VPS."
+        images={[CvCreator1, CvCreator2, CvCreator3, CvCreator4, CvCreator5]}
         stack={[
           "ASP.NET Core",
           "Clean Architecture",
-          "Supabase",
-          "SeriLog",
+          "PostgreSQL",
           "Playwright",
+          "Docker",
         ]}
         codeLink="https://github.com/mehmtcankilnc/CvCreatorBackend"
         // demoLink="chitchat"
@@ -42,7 +44,7 @@ export default function BackendProjects() {
         lightweight Clean Architecture approach to ensure maintainability and 
         separation of concerns. The application is containerized with Docker, 
         uses Azure SQL as the database, and has been deployed on Microsoft Azure."
-        img={ChitChat}
+        images={[ChitChat]}
         stack={[
           "ASP.NET Core",
           "Clean Architecture",
@@ -66,7 +68,7 @@ export default function BackendProjects() {
         requests and errors to the files. I implemented global exception handling,  
         and mapping endpoints middlewares. The application is containerized with 
         Docker, uses PostgreSQL as the database."
-        img={LexiBox}
+        images={[LexiBox]}
         stack={[
           "ASP.NET Core",
           "Vertical Slice Architecture",

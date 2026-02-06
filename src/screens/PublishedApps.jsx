@@ -1,5 +1,7 @@
 import TutorSudokuIcon from "../assets/TutorSudokuIcon.png";
 import TutorSudokuQR from "../assets/TutorSudokuQR.png";
+import CvCreatorIcon from "../assets/CvCreatorAppIcon.png";
+import CvCreatorQR from "../assets/CvCreatorQR.png";
 import { FaGooglePlay } from "react-icons/fa";
 
 const apps = [
@@ -9,6 +11,16 @@ const apps = [
     icon: TutorSudokuIcon,
     playStore: "https://play.google.com/store/apps/details?id=com.tutorsudoku",
     tags: ["Puzzle", "React Native", "TypeScript"],
+    qr: TutorSudokuQR,
+  },
+  {
+    title: "Cv Creator",
+    desc: "The fastest way to create professional resumes and cover letters with no login or membership required. Users can choose from modern templates and download watermark-free high-quality PDFs instantly.",
+    icon: CvCreatorIcon,
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.mehmtcankilinc.cvcreator",
+    tags: ["Productivity", "PDF Generation", "React Native", "TypeScript"],
+    qr: CvCreatorQR,
   },
 ];
 
@@ -32,7 +44,7 @@ export default function PublishedApps({ id }) {
                 <img
                   src={app.icon}
                   alt={app.title}
-                  className="w-full h-48 object-cover rounded-xl mb-4 shadow-sm"
+                  className="w-48 h-48 object-cover rounded-xl mb-4 shadow-sm"
                 />
                 <h3 className="font-bold text-xl mb-2 text-gray-800">
                   {app.title}
@@ -51,17 +63,12 @@ export default function PublishedApps({ id }) {
                   ))}
                 </div>
               </div>
-
               <div className="absolute inset-0 h-full w-full bg-gray-900 rounded-2xl p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
                 <h3 className="text-white font-bold text-lg mb-4">
                   Scan to Download
                 </h3>
                 <div className="bg-white p-2 rounded-lg mb-6 shadow-lg">
-                  <img
-                    src={TutorSudokuQR}
-                    alt="QR Code"
-                    className="w-32 h-32"
-                  />
+                  <img src={app.qr} alt="QR Code" className="w-32 h-32" />
                 </div>
                 <div className="flex flex-col gap-3 w-full max-w-[200px]">
                   {app.playStore && (
